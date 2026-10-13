@@ -9,7 +9,9 @@
       <ol>
         <% for (const comment of comments) { %>
           <li>
-            <%= comment.text %>
+            <%- comment.text %>
+            <!-- Use <%= or <%- if using xss validator package -->
+            <!-- <%= comment.text %> -->
           </li>
         <% } %>
       </ol>
